@@ -3,8 +3,6 @@
 
 Welcome to my personal money management app repository! This app helps me track my expenses and income easily and efficiently.
 
-![App Demo](demo.gif) <!-- If you have a demo GIF or image -->
-
 ## Features
 
 - Log daily expenses and income.
