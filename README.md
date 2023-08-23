@@ -62,10 +62,3 @@ Welcome to my personal money management app repository! This app helps me track 
 ## Contributing
 
 Contributions are welcome! If you have suggestions or found a bug, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
-Remember to customize this template further based on the specifics of Helix and any other changes you've made in your project. Update the technologies used, setup instructions, and any relevant URLs as needed.
