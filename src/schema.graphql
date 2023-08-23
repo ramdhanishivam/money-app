@@ -1,0 +1,36 @@
+type Expense {
+  id: ID!
+  category: String!
+  amount: Float!
+  date: String!
+}
+
+type Income {
+  id: ID!
+  source: String!
+  amount: Float!
+  date: String!
+}
+
+type ExpenseSummary {
+  totalExpenses: Float!
+  totalIncome: Float!
+  netBalance: Float!
+}
+
+type Query {
+  getIncomes: [Income!]!
+  getExpenseSummary: ExpenseSummary!
+  info: String!
+  getExpenses: [Expense!]!
+}
+
+type Mutation {
+  addExpense(category: String!, amount: Float!, date: String!): Expense!
+  addIncome(source: String!, amount: Float!, date: String!): Income!
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
