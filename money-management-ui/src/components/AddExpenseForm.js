@@ -1,5 +1,4 @@
 import { useMutation, gql } from '@apollo/client';
-// import { ADD_EXPENSE } from '../mutations';
 
 const ADD_EXPENSE = gql`
     mutation addExpense($category: String!, $amount: Float!, $date: String!) {
@@ -12,17 +11,18 @@ const ADD_EXPENSE = gql`
     }
 `;
 export default function AddExpenseForm() {
-  const [addExpense] = useMutation(ADD_EXPENSE);
 
   const handleSubmit = e => {
     e.preventDefault();
-    const { category, amount, date } = e.target.elements;
+    const date = e.target.elements.date.value;
+    const amount = e.target.elements.amount.value;
+    const category = e.target.elements.category.value;
 
-    addExpense({
+    const [ ] = useMutation(ADD_EXPENSE, {
       variables: {
-        category: category.value,
-        amount: parseFloat(amount.value),
-        date: date.value,
+        category: category,
+        amount: parseFloat(amount),
+        date: date,
       },
     });
   };
